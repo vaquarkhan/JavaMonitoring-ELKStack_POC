@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true" >
+
+<!-- Configuration for Sentry  -->
+
+  <appender name="sentry" class="net.kencochrane.raven.logback.SentryAppender">
+    <dsn>https://0a99115b2b66421cb44fea5d4e91c2ca:4dab98b793ff43ac9decbd68aacdb348@sentry.io/123627</dsn>
+    <encoder>
+       <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <turboFilter class="ch.qos.logback.classic.turbo.MarkerFilter">
+        <Name>FATAL_FILTER</Name>
+        <Marker>FATAL</Marker>
+        <OnMatch>ACCEPT</OnMatch>
+  </turboFilter>
+  
+<!-- Configuration for Elastic  -->
+
+  <appender name="file" class="ch.qos.logback.core.FileAppender">
+    <file>c:/tmp/application.log</file>
+    <encoder>
+      <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="async" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="file" />
+  </appender>
+  
+  
+  <root level="trace">
+    <appender-ref ref="sentry" />
+  </root>
+  
+  <root level="debug">
+    <appender-ref ref="async" />
+  </root>
+  
+  <root level="info">
+    <appender-ref ref="async" />
+  </root>
+  
+  <root level="warn">
+    <appender-ref ref="async"/>
+  </root>
+  
+  <root level="error">
+    <appender-ref ref="sentry" />
+  </root>
+  
+  <root level="fatal">
+    <appender-ref ref="sentry" />
+  </root>
+
+</configuration>
