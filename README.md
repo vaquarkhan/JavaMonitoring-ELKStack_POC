@@ -8,3 +8,8 @@ exception logging
 logging ( category, scope, tags[], data,
 created, modified, active )
 
+
+
+https://balamaci.ro/java-app-monitoring-with-elk-logstash/
+http://logz.io/learn/complete-guide-elk-stack/
+https://blog.codecentric.de/en/2014/10/log-management-spring-boot-applications-logstash-elastichsearch-kibana/
