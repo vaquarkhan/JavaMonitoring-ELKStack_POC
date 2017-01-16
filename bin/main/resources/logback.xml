@@ -20,7 +20,7 @@
 <!-- Configuration for Elastic  -->
 
   <appender name="file" class="ch.qos.logback.core.FileAppender">
-    <file>c:/tmp/application.log</file>
+    <file>D:\microservice-poc\JavaMonitoring ElasticSearchKibana_POC\logs\application.log</file>
     <encoder>
       <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
     </encoder>
