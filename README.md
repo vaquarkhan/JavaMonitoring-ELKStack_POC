@@ -17,3 +17,7 @@ http://logz.io/learn/complete-guide-elk-stack/
 https://blog.codecentric.de/en/2014/10/log-management-spring-boot-applications-logstash-elastichsearch-kibana/
 
 https://www.elastic.co/webinars/introduction-elk-stack
+
+https://github.com/elastic/kibana
+
+
