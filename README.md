@@ -1,4 +1,4 @@
-# LogPlay
+# Example
 
 This component will integrate sentry (
 https://sentry.io ) for debug, error and
